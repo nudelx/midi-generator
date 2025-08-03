@@ -56,10 +56,7 @@ function App() {
       const track = new MidiWriter.Track();
       
       // Set tempo
-      track.addEvent(new MidiWriter.MetaEvent({
-        type: 'setTempo',
-        data: [Math.round(60000000 / tempo)]
-      }));
+      track.setTempo(tempo);
       
       const scaleIntervals = scales[scale];
       const rootNoteIndex = rootNotes.indexOf(rootNote);

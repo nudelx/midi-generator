@@ -1,25 +1,26 @@
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e6ed;
 }
 
 .card {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(30, 41, 59, 0.95);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
 .card-title {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #64b5f6, #42a5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -28,73 +29,98 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3b82f6, #2563eb);
   border: none;
   border-radius: 12px;
   padding: 12px 24px;
   font-weight: 600;
   transition: all 0.2s ease;
+  color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-  background: linear-gradient(45deg, #5a6fd8, #6a42a0);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(45deg, #2563eb, #1d4ed8);
+  color: white;
 }
 
 .btn-success {
-  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  background: linear-gradient(45deg, #10b981, #059669);
   border: none;
   border-radius: 12px;
-  color: #2d5016;
+  color: white;
   font-weight: 600;
   transition: all 0.2s ease;
 }
 
 .btn-success:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
-  background: linear-gradient(45deg, #4a9428, #96d4b8);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
+  background: linear-gradient(45deg, #059669, #047857);
+  color: white;
 }
 
-.form-select, .form-control {
+.form-select,
+.form-control {
   border-radius: 12px;
-  border: 2px solid #e9ecef;
+  border: 2px solid #374151;
   transition: all 0.2s ease;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(31, 41, 55, 0.9);
+  color: #e0e6ed;
 }
 
-.form-select:focus, .form-control:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-  background: white;
+.form-select:focus,
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+  background: rgba(31, 41, 55, 1);
+  color: #e0e6ed;
+}
+
+.form-select option {
+  background: #1f2937;
+  color: #e0e6ed;
 }
 
 .form-label {
   font-weight: 600;
-  color: #495057;
+  color: #d1d5db;
   margin-bottom: 8px;
 }
 
+.form-text {
+  color: #9ca3af;
+}
+
 .alert-success {
-  background: linear-gradient(45deg, rgba(86, 171, 47, 0.1), rgba(168, 230, 207, 0.1));
-  border: 2px solid rgba(86, 171, 47, 0.3);
+  background: linear-gradient(45deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.2));
+  border: 2px solid rgba(16, 185, 129, 0.4);
   border-radius: 12px;
-  color: #2d5016;
+  color: #34d399;
 }
 
 .alert-info {
-  background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-  border: 2px solid rgba(102, 126, 234, 0.3);
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
+  border: 2px solid rgba(59, 130, 246, 0.4);
   border-radius: 12px;
-  color: #3d4465;
+  color: #60a5fa;
 }
 
 .drag-area {
   border-radius: 12px;
   transition: all 0.2s ease;
+  background: rgba(31, 41, 55, 0.5);
 }
 
 .drag-area:hover {
-  background: rgba(102, 126, 234, 0.05) !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+}
+
+.border-secondary {
+  border-color: #4b5563 !important;
+}
+
+.text-muted {
+  color: #9ca3af !important;
 }
