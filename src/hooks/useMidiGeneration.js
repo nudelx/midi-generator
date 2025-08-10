@@ -81,7 +81,6 @@ export const useMidiGeneration = () => {
     e.dataTransfer.dropEffect = "copy";
   };
 
-  // Cleanup download URL when component unmounts
   useEffect(() => {
     return () => {
       if (downloadUrl) {
@@ -91,7 +90,6 @@ export const useMidiGeneration = () => {
   }, [downloadUrl]);
 
   return {
-    // State
     scale,
     rootNote,
     octave,
@@ -103,7 +101,6 @@ export const useMidiGeneration = () => {
     midiBlob,
     isDragging,
 
-    // Setters
     setScale,
     setRootNote,
     setOctave,
@@ -112,7 +109,6 @@ export const useMidiGeneration = () => {
     setPattern,
     setRhythm,
 
-    // Actions
     generateMidi,
     handleDragStart,
     handleDragEnd,

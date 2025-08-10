@@ -6,7 +6,6 @@ import { useMidiGeneration } from "./hooks/useMidiGeneration";
 
 function App() {
   const {
-    // State
     scale,
     rootNote,
     octave,
@@ -18,7 +17,6 @@ function App() {
     midiBlob,
     isDragging,
 
-    // Setters
     setScale,
     setRootNote,
     setOctave,
@@ -27,7 +25,6 @@ function App() {
     setPattern,
     setRhythm,
 
-    // Actions
     generateMidi,
     handleDragStart,
     handleDragEnd,

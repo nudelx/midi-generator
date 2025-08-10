@@ -10,7 +10,6 @@ class MidiGeneratorService {
     const { scale, rootNote, octave, tempo, noteCount, pattern, rhythm } =
       params;
 
-    // Validation
     if (
       octave < VALIDATION_RULES.OCTAVE.min ||
       octave > VALIDATION_RULES.OCTAVE.max
@@ -38,19 +37,16 @@ class MidiGeneratorService {
       throw new Error("No valid MIDI notes generated. Try a different octave.");
     }
 
-    // Apply pattern
     if (pattern === "Up-Down") {
       notes = [...notes, ...notes.slice(0, -1).reverse()];
     } else if (pattern === "Down") {
       notes.reverse();
     }
 
-    // Limit note count if specified
     if (noteCount && noteCount > 0) {
       notes = notes.slice(0, noteCount);
     }
 
-    // Add notes to track
     notes.forEach((note, index) => {
       track.addEvent(
         new MidiWriter.NoteEvent({
